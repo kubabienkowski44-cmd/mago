@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pełna Oferta | DREVNO</title>
+        <link rel="icon" type="image/svg+xml" href="logo-drewno.svg">
+        <style>
+            body { font-family: Arial, Helvetica, sans-serif; background-color: #f4f1ea; margin: 0; }
+            .hamburger { display: none; }
+            .przyciski { display: block; }
+            @media (max-width: 760px) { .hamburger { display: block; } .przyciski { display: none; } }
+            .nav-link { margin: 10px; text-decoration: none; color: #5d4037; font-weight: bold; transition: color 0.3s; }
+            .container { background-color: white; max-width: 1000px; margin: auto; padding: 40px 20px; box-sizing: border-box; }
+            .btn-back { display: inline-block; text-decoration: none; color: #5d4037; font-weight: bold; margin-bottom: 20px; }
+            
+            table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+            th { background-color: #5d4037; color: white; padding: 15px; text-align: left; }
+            td { padding: 15px; border-bottom: 1px solid #ddd; }
+            tr:hover { background-color: #f9f9f9; }
+            
+            footer a { color: white; text-decoration: none; }
+        </style>
+    </head>
+    <body>
+        <header style="background-color: white;">
+            <section style="background-color: #5d4037; padding: 20px; position: relative;">
+                <div style="text-align: right; position: absolute; top: 10px; right: 10px;">
+                    <details style="background-color: #8d6e63; color: white; border-radius: 10px;">
+                        <summary style="padding: 5px; cursor: pointer;">Język</summary>
+                        <div style="padding: 5px; background: white; color: black; border-radius: 5px;">
+                            <button>Polski</button><br><button>English</button>
+                        </div>
+                    </details>
+                </div>
+            </section>
+            <section style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+                <a href="index.html"><img src="logo-drewno.svg" alt="DREVNO logo" width="250" height="70"></a>
+            </section>
+        </header>
+
+        <main class="container">
+            <a href="index.html" class="btn-back">← Powrót do strony głównej</a>
+            
+            <h1 style="color: #5d4037; border-bottom: 3px solid #5d4037; padding-bottom: 10px;">Cennik i Pełna Oferta</h1>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produkt</th>
+                        <th>Gatunek</th>
+                        <th>Dostępność</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tarcica Sucha 50mm</strong></td>
+                        <td>Dąb / Jesion</td>
+                        <td style="color: green;">Od ręki</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Więźba Dachowa</strong></td>
+                        <td>Świerk / Sosna</td>
+                        <td>Na zamówienie (7 dni)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Podbitka Świerkowa</strong></td>
+                        <td>Świerk Skandynawski</td>
+                        <td style="color: green;">Od ręki</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pellet Klasa A1</strong></td>
+                        <td>Iglasty</td>
+                        <td style="color: green;">Od ręki</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <section style="background-color: #f1f8e9; padding: 25px; border-radius: 10px; margin-top: 40px; text-align: center;">
+                <h3 style="color: #2e7d32;">Potrzebujesz większej ilości?</h3>
+                <p>Przy zamówieniach powyżej 5m³ oferujemy darmowy transport do 50km!</p>
+            </section>
+        </main>
+
+        <footer style="background-color: #3e2723; color: white; padding: 40px 0 20px 0; margin-top: 50px; text-align: center;">
+            <p>&copy; 2026 DREVNO. Wszelkie prawa zastrzeżone.</p>
+        </footer>
+    </body>
+</html>

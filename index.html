@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>DREVNO | Strona główna</title>
+        <link rel="icon" type="image/svg+xml" href="logo-drewno.svg">
+        <style>
+            /* Reset i podstawy */
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #f4f1ea;
+                margin: 0;
+            }
+
+            /* Nawigacja i Hamburger */
+            .hamburger { display: none; }
+            .przyciski { display: block; }
+
+            @media (max-width: 760px) {
+                .hamburger { display: block; }
+                .przyciski { display: none; }
+            }
+
+            /* Stylizacja przycisków w menu */
+            .nav-link {
+                margin: 10px;
+                text-decoration: none;
+                color: #5d4037;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+            .nav-link:hover { color: #8d6e63; }
+
+            /* Główny kontener strony */
+            .container {
+                background-color: white;
+                max-width: 1000px;
+                margin: auto;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            /* STYL PRZYCISKÓW  */
+            .btn-action {
+                margin: 10px;
+                padding: 15px 30px;
+                font-size: 18px;
+                width: 220px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: transform 0.2s, background-color 0.3s;
+                font-weight: bold;
+            }
+
+            .btn-action:hover {
+                transform: scale(1.05); /* Delikatne powiększenie */
+            }
+
+            /* Kolory dla przycisków wyceny */
+            .btn-brown { background-color: #5d4037; color: white; }
+            .btn-green { background-color: #388e3c; color: white; }
+
+            /* Przyciski usług (przezroczyste z obramowaniem) */
+            .btn-service {
+                padding: 15px;
+                width: 200px;
+                background-color: white;
+                border: 2px solid #5d4037;
+                color: #5d4037;
+                cursor: pointer;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: all 0.3s;
+            }
+
+            .btn-service:hover {
+                background-color: #5d4037;
+                color: white;
+            }
+
+            /* Stopka */
+            footer a {
+                color: white;
+                text-decoration: none;
+                transition: opacity 0.3s;
+            }
+            footer a:hover { opacity: 0.7; }
+        </style>
+    </head>
+    <body>
+        <header style="background-color: white;">
+            <section style="background-color: #5d4037; padding: 20px; position: relative;">
+                <div style="text-align: right; position: absolute; top: 10px; right: 10px;">
+                    <details style="background-color: #8d6e63; color: white; border-radius: 10px;">
+                        <summary style="padding: 5px; cursor: pointer;">Język</summary>
+                        <div style="padding: 5px; background: white; color: black; border-radius: 5px;">
+                            <button>Polski</button><br>
+                            <button>English</button>
+                        </div>
+                    </details>
+                </div>
+            </section>
+     
+            <section>
+                <div style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+                    <details class="hamburger">
+                        <summary style="font-size: 24px; list-style: none; cursor:pointer">☰</summary>
+                        <div style="position:absolute; background-color: white; padding: 10px; border: 1px solid #5d4037; z-index: 100;">
+                            <a href="onas.html" class="nav-link">O nas</a><br>
+                            <a href="produkty.html" class="nav-link">Produkty</a><br>
+                            <a href="kontakt.html" class="nav-link">Kontakt</a>
+                        </div>
+                    </details>
+
+                    <a href="index.html">
+                        <img src="logo-drewno.svg" alt="DREVNO logo" width="250" height="70">
+                    </a>
+                    
+                    <hr style="height: 60px; border: none; border-right: 2px solid #5d4037; margin: 0 20px;">
+                    
+                    <div class="przyciski">
+                        <a href="onas.html" class="nav-link">O nas</a>
+                        <a href="produkty.html" class="nav-link">Produkty</a>
+                        <a href="kontakt.html" class="nav-link">Kontakt</a>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <header>
+            <section>
+                <img src="hero-drewno.jpg" alt="Najwyższej jakości tarcica" style="width: 100%; height: 400px; object-fit: cover; display: block;">
+            </section>
+        </header>
+
+        <main class="container">
+            <section style="background-color: #efebe9; padding: 20px; border-left: 5px solid #5d4037; margin-bottom: 20px;">
+                <div style="text-align: center;">
+                    <h2>DREVNO Tradycja w każdym słoju</h2>
+                    <p>Dostarczamy wyroby z drewna najwyższej klasy dla budownictwa i stolarni.</p>
+                </div>
+            </section>
+    
+            <section style="text-align: center; margin-bottom: 40px;">
+                <div style="font-size: 26px; margin-bottom: 20px;">Zapytaj o darmową wycenę</div>
+                <button onclick="location.href='detal.html'" class="btn-action btn-brown">Klient Detaliczny</button>
+                <button onclick="location.href='hurt.html'" class="btn-action btn-green">Hurtownia / Firma</button>
+            </section>
+
+            <section style="text-align: center;">
+                <h2 style="font-size: 28px; margin-bottom: 30px;">Nasza Specjalność</h2>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                    <button onclick="location.href='tarcica.html'" class="btn-service">Tarcica Sucha</button>
+                    <button onclick="location.href='wiezba.html'" class="btn-service">Więźba Dachowa</button>
+                    <button onclick="location.href='elewacje.html'" class="btn-service">Profile Elewacyjne</button>
+                    <button onclick="location.href='opal.html'" class="btn-service">Pellet i Brykiet</button>
+                </div>
+            </section>
+
+            <hr style="border: none; border-top: 2px solid #5d4037; margin: 50px 0;">
+
+            <section style="background-color: #f1f8e9; padding: 30px; border-radius: 10px; text-align: center;">
+                <h2 style="color: #2e7d32;">Zaufaj ekspertom od drewna</h2>
+                <ul style="list-style: none; padding: 0; font-size: 18px; line-height: 2.2;">
+                    <li>🌲 Surowiec z certyfikatem FSC</li>
+                    <li>🏗️ Suszenie komorowe tarcicy</li>
+                    <li>🪵 Precyzyjna obróbka czterostronna</li>
+                    <li>🚛 Szybka dostawa własnym transportem</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer style="background-color: #3e2723; color: white; padding: 40px 0 20px 0; margin-top: 50px; text-align: center;">
+            <div style="margin-bottom: 30px;">
+                <a href="oferta.html" style="margin-right: 15px; border-right: 1px solid white; padding-right: 15px;">Pełna Oferta</a>
+                <a href="prywatnosc.html" style="margin-right: 15px; border-right: 1px solid white; padding-right: 15px;">RODO</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+            <a href="index.html">
+                <img src="logo-drewno-stopka.svg" alt="DREVNO logo" width="180" style="display: block; margin: 10px auto;">
+            </a>
+            <p>&copy; 2026 DREVNO. Wszelkie prawa zastrzeżone.</p>
+        </footer>
+    </body>
+</html>

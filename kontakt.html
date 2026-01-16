@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kontakt | DREVNO</title>
+        <link rel="icon" type="image/svg+xml" href="logo-drewno.svg">
+        <style>
+            body { font-family: Arial, Helvetica, sans-serif; background-color: #f4f1ea; margin: 0; }
+            .hamburger { display: none; }
+            .przyciski { display: block; }
+            @media (max-width: 760px) { .hamburger { display: block; } .przyciski { display: none; } }
+            .nav-link { margin: 10px; text-decoration: none; color: #5d4037; font-weight: bold; }
+            .container { background-color: white; max-width: 1000px; margin: auto; padding: 20px; box-sizing: border-box; }
+            footer a { color: white; text-decoration: none; }
+        </style>
+    </head>
+    <body>
+        <header style="background-color: white;">
+            <section style="background-color: #5d4037; padding: 20px; position: relative;">
+                <div style="text-align: right; position: absolute; top: 10px; right: 10px;">
+                    <details style="background-color: #8d6e63; color: white; border-radius: 10px;">
+                        <summary style="padding: 5px; cursor: pointer;">Język</summary>
+                        <div style="padding: 5px; background: white; color: black; border-radius: 5px;">
+                            <button>Polski</button><br><button>English</button>
+                        </div>
+                    </details>
+                </div>
+            </section>
+            
+            <section>
+                <div style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+                    <details class="hamburger">
+                        <summary style="font-size: 24px; list-style: none; cursor:pointer">☰</summary>
+                        <div style="position:absolute; background-color: white; padding: 10px; border: 1px solid #5d4037; z-index: 100;">
+                            <a href="onas.html" class="nav-link">O nas</a><br>
+                            <a href="produkty.html" class="nav-link">Produkty</a><br>
+                            <a href="kontakt.html" class="nav-link">Kontakt</a>
+                        </div>
+                    </details>
+                    <a href="index.html"><img src="logo-drewno.svg" alt="DREVNO logo" width="250" height="70"></a>
+                    <hr style="height: 60px; border: none; border-right: 2px solid #5d4037; margin: 0 20px;">
+                    <div class="przyciski">
+                        <a href="onas.html" class="nav-link">O nas</a>
+                        <a href="produkty.html" class="nav-link">Produkty</a>
+                        <a href="kontakt.html" class="nav-link">Kontakt</a>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <header>
+            <img src="kontakt-hero.jpg" alt="Skontaktuj się z nami" style="width: 100%; height: 350px; object-fit: cover; display: block;">
+        </header>
+
+        <main class="container">
+            <a href="index.html" style="text-decoration: none; color: #5d4037; font-weight: bold;">← Powrót</a>
+            
+            <h2 style="color: #5d4037; margin-top: 30px;">Dane kontaktowe</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 40px; font-size: 18px; line-height: 1.8;">
+                <div>
+                    <p><strong>Adres:</strong><br>ul. Drewniana 12, 00-000 Poznań</p>
+                    <p><strong>Telefon:</strong><br>+48 500 600 700</p>
+                </div>
+                <div>
+                    <p><strong>Email:</strong><br>biurodrevno@gmail.com</p>
+                    <p><strong>NIP:</strong><br>123-456-78-90</p>
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 2px solid #5d4037; margin: 40px 0;">
+
+            <section style="background-color: #f1f8e9; padding: 30px; border-radius: 10px; text-align: center;">
+                <h2 style="color: #2e7d32;">Biuro czynne:</h2>
+                <p style="font-size: 20px;">Poniedziałek - Piątek: 08:00 - 16:00</p>
+                <p style="font-size: 16px;">W pilnych sprawach prosimy o kontakt telefoniczny.</p>
+            </section>
+        </main>
+
+        <footer style="background-color: #3e2723; color: white; padding: 40px 0 20px 0; margin-top: 50px; text-align: center;">
+            <p>&copy; 2026 DREVNO. Wszystkie prawa zastrzeżone.</p>
+        </footer>
+    </body>
+</html>

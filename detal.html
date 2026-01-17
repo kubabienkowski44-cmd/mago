@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>DREVNO | Wycena Detaliczna</title>
+    <link rel="icon" type="image/svg+xml" href="logo-drewno.svg">
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; background-color: #f4f1ea; margin: 0; }
+        .nav-link { margin: 10px; text-decoration: none; color: #5d4037; font-weight: bold; transition: color 0.3s; }
+        .nav-link:hover { color: #8d6e63; }
+        
+        .container { background-color: white; max-width: 1000px; margin: auto; padding: 20px; box-sizing: border-box; min-height: 600px; }
+        
+        /* Stylistyka kalkulatora */
+        .calc-card { max-width: 500px; margin: 40px auto; padding: 30px; border: 2px solid #5d4037; border-radius: 10px; background: #fff; }
+        h1 { color: #5d4037; text-align: center; font-size: 24px; }
+        label { display: block; margin-top: 15px; font-weight: bold; color: #3e2723; }
+        input, select { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        
+        .btn-calc { background-color: #5d4037; color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 20px; font-size: 16px; transition: transform 0.2s; }
+        .btn-calc:hover { transform: scale(1.02); background-color: #8d6e63; }
+        
+        .result { margin-top: 20px; padding: 15px; background: #efebe9; border-radius: 5px; text-align: center; display: none; }
+        .back-btn { text-decoration: none; color: #5d4037; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        footer a { color: white; text-decoration: none; transition: opacity 0.3s; }
+        footer a:hover { opacity: 0.7; }
+    </style>
+</head>
+<body>
+    <header style="background-color: white;">
+        <section style="background-color: #5d4037; padding: 20px;"></section>
+        <section>
+            <div style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+                <a href="index.html">
+                    <img src="logo-drewno.svg" alt="DREVNO logo" width="250" height="70">
+                </a>
+                <hr style="height: 60px; border: none; border-right: 2px solid #5d4037; margin: 0 20px;">
+                <div class="przyciski">
+                    <a href="onas.html" class="nav-link">O nas</a>
+                    <a href="produkty.html" class="nav-link">Produkty</a>
+                    <a href="kontakt.html" class="nav-link">Kontakt</a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="container">
+        <a href="index.html" class="back-btn">← Powrót</a>
+        
+        <div class="calc-card">
+            <h1>Kalkulator Tarcicy</h1>
+            <label>Rodzaj drewna:</label>
+            <select id="cenaM3">
+                <option value="3200">Sosna (3200 zł/m³)</option>
+                <option value="4500">Dąb (4500 zł/m³)</option>
+                <option value="2800">Świerk (2800 zł/m³)</option>
+            </select>
+
+            <label>Grubość (mm):</label>
+            <input type="number" id="grub" placeholder="np. 25">
+            
+            <label>Szerokość (mm):</label>
+            <input type="number" id="szer" placeholder="np. 150">
+            
+            <label>Długość (m):</label>
+            <input type="number" id="dlug" step="0.1" placeholder="np. 4.0">
+
+            <button class="btn-calc" onclick="oblicz()">Oblicz cenę</button>
+
+            <div id="wynikBox" class="result">
+                <div style="font-size: 14px;">Objętość: <span id="m3">0</span> m³</div>
+                <div style="font-size: 22px; font-weight: bold; color: #5d4037; margin-top: 5px;"><span id="pln">0</span> PLN</div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background-color: #3e2723; color: white; padding: 40px 0 20px 0; text-align: center;">
+        <div style="margin-bottom: 30px;">
+            <a href="oferta.html" style="margin-right: 15px; border-right: 1px solid white; padding-right: 15px;">Pełna Oferta</a>
+            <a href="prywatnosc.html" style="margin-right: 15px; border-right: 1px solid white; padding-right: 15px;">RODO</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+        <img src="logo-drewno-stopka.svg" alt="DREVNO logo" width="180" style="display: block; margin: 10px auto;">
+        <p>&copy; 2026 DREVNO. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script>
+        function oblicz() {
+            const m3Price = document.getElementById('cenaM3').value;
+            const g = document.getElementById('grub').value / 1000;
+            const s = document.getElementById('szer').value / 1000;
+            const d = document.getElementById('dlug').value;
+
+            if(g > 0 && s > 0 && d > 0) {
+                const vol = g * s * d;
+                const total = vol * m3Price;
+                document.getElementById('m3').innerText = vol.toFixed(4);
+                document.getElementById('pln').innerText = total.toFixed(2);
+                document.getElementById('wynikBox').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

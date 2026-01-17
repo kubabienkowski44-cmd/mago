@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>DREVNO | Hurt i Firmy</title>
+    <link rel="icon" type="image/svg+xml" href="logo-drewno.svg">
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; background-color: #f4f1ea; margin: 0; }
+        
+        /* Stylistyka nawigacji ze strony głównej */
+        .nav-link { margin: 10px; text-decoration: none; color: #5d4037; font-weight: bold; transition: color 0.3s; }
+        .nav-link:hover { color: #8d6e63; }
+        
+        .container { background-color: white; max-width: 1000px; margin: auto; padding: 20px; box-sizing: border-box; }
+        
+        /* Formularz B2B */
+        .b2b-form { max-width: 600px; margin: 40px auto; padding: 30px; border-top: 5px solid #388e3c; background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        h1 { color: #388e3c; text-align: center; }
+        label { display: block; margin-top: 15px; font-weight: bold; color: #1b5e20; }
+        input, textarea { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        
+        /* Przycisk hurtowy zielony */
+        .btn-send { background-color: #388e3c; color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 20px; font-size: 16px; transition: transform 0.2s; }
+        .btn-send:hover { background-color: #2e7d32; transform: scale(1.02); }
+        
+        /* strzałka powrotna */
+        .back-btn { text-decoration: none; color: #5d4037; font-weight: bold; display: inline-block; margin-bottom: 20px; transition: opacity 0.3s; }
+        .back-btn:hover { opacity: 0.7; }
+
+        footer a { color: white; text-decoration: none; transition: opacity 0.3s; }
+        footer a:hover { opacity: 0.7; }
+    </style>
+</head>
+<body>
+    <header style="background-color: white;">
+        <section style="background-color: #5d4037; padding: 20px;"></section>
+        <section>
+            <div style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+                <a href="index.html">
+                    <img src="logo-drewno.svg" alt="DREVNO logo" width="250" height="70">
+                </a>
+                <hr style="height: 60px; border: none; border-right: 2px solid #5d4037; margin: 0 20px;">
+                <div>
+                    <a href="onas.html" class="nav-link">O nas</a>
+                    <a href="produkty.html" class="nav-link">Produkty</a>
+                    <a href="kontakt.html" class="nav-link">Kontakt</a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="container">
+        <a href="index.html" class="back-btn">← Powrót</a>
+        
+        <div class="b2b-form">
+            <h1>Zapytanie B2B</h1>
+            <p style="text-align: center;">Dla hurtowni i firm produkcyjnych przygotowujemy wyceny indywidualne.</p>
+            <form>
+                <label>Nazwa Firmy:</label>
+                <input type="text" placeholder="Firma / NIP" required>
+                
+                <label>E-mail do kontaktu:</label>
+                <input type="email" placeholder="biuro@firma.pl" required>
+                
+                <label>Zapotrzebowanie:</label>
+                <textarea rows="5" placeholder="Np. 20m3 tarcicy sosnowej 25mm, klasa II, dostawa co miesiąc..."></textarea>
+                
+                <button type="submit" class="btn-send">Wyślij zapytanie</button>
+            </form>
+        </div>
+    </main>
+
+    <footer style="background-color: #3e2723; color: white; padding: 40px 0 20px 0; text-align: center;">
+        <div style="margin-bottom: 30px;">
+            <a href="oferta.html" style="margin-right: 15px; border-right: 1px solid white; padding-right: 15px;">Pełna Oferta</a>
+            <a href="prywatnosc.html" style="margin-right: 15px; border-right: 1px solid white; padding-right: 15px;">RODO</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+        <img src="logo-drewno-stopka.svg" alt="DREVNO logo" width="180" style="display: block; margin: 10px auto;">
+        <p>&copy; 2026 DREVNO. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>
